@@ -25,7 +25,7 @@ decoded_data = base64.b64decode(dedata)
 def showlbl():
     print('='*50)
     print('STARTED WITH CODE RUNNER!')
-    print('VERSION 0.0.1')
+    print('VERSION 0.0.2')
     print('BY XXHIEXX')
     print(f'SIZE:{len(data)} BYTES')
     print('='*50)
