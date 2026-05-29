@@ -1,6 +1,10 @@
+# CHECK SCRIPT
+
 if __name__ != '__main__':
     import sys
     sys.exit(0)
+
+# CHECK INPUT FILE
 
 import sys
 
@@ -15,8 +19,12 @@ import lzma
 
 results = []
 
+# TIMER
+
 timer = pytilsx.Timer()
 timer.start()
+
+# READ FILE
 
 filename = os.path.basename(file_path)
 name_without_ext = os.path.splitext(filename)[0]
@@ -29,12 +37,18 @@ timer.reset()
 
 timer.start()
 
+# COMPRESS FILE
+
 compressed_data = lzma.compress(bytes(data, encoding='utf-8'), preset=9)
 with open('Packed/'+name_without_ext+'.packed', 'wb+') as f:
     f.write(compressed_data)
 
+# STOP TIMER
+
 timer.end()
 results.append(timer.get())
+
+#RESULTS
 
 print('='*50)
 print(f'Reading time:{results[0]} sec')
