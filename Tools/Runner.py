@@ -4,15 +4,21 @@ if __name__ != '__main__':
     import sys
     sys.exit(0)
 
-import lzma
-
 # DONT TOUCH THIS CODE LINE:
 
 data = """Patch"""
 
 # DECOMPRESS DATA
 
+import lzma
+
 dedata = lzma.decompress(data)
+
+# DECODE DATA
+
+import base64
+
+decoded_data = base64.b64decode(dedata)
 
 # SHOW WATERMARK
 
@@ -26,9 +32,10 @@ def showlbl():
 
 showlbl()
 
-import os
-
 # CLEAN TERMINAL
+
+import os
+import sys
 
 if sys.platform.startswith('win'):
     os.system('cls')
@@ -38,7 +45,7 @@ else:
 # RUN PROCESS
 
 def thproc():
-    compiled = compile(dedata, '<string>', 'exec')
+    compiled = compile(decoded_data, '<string>', 'exec')
     exec(compiled, globals())
 
 import threading

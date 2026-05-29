@@ -39,9 +39,18 @@ timer.start()
 
 # DECOMPRESS FILE
 
-decompressed_data = lzma.decompress(data).decode()
-with open(name_without_ext + '.py', 'w+') as f:
-    f.write(decompressed_data)
+decompressed_data = lzma.decompress(data)
+
+# DECODED FILE
+
+import base64
+
+decoded_data = base64.b64decode(decompressed_data).decode()
+
+# SAVE FILE
+
+with open('Unpacked/'  + name_without_ext + '.py', 'w+') as f:
+    f.write(decoded_data)
 
 timer.end()
 results.append(timer.get())

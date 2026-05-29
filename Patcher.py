@@ -13,16 +13,16 @@ if len(sys.argv) > 1:
 else:
     sys.exit(0)
 
-#GET PROJECT NAME
+# GET PROJECT NAME
 
 name = input('ProjectName:')
 
-#READING TOOL FOR CREATION
+# READING TOOL FOR CREATION
 
 with open('Tools/Runner.py', 'r') as f:
     runnercode = f.read()
 
-#REFACTORING
+# REFACTORING
 
 new = '#Using patcher'
 for line in runnercode.split('\n'):
@@ -33,7 +33,7 @@ for line in runnercode.split('\n'):
     else:
         new += f'\n{line}'
 
-#SAVING
+# SAVING
 
 with open('Patched/'+name+'.py', 'w+') as f:
     f.write(new)

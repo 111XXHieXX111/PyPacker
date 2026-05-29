@@ -17,3 +17,4 @@ if __name__ == '__main__':
 
     os.makedirs('Packed', exist_ok=True)
     os.makedirs('Patched', exist_ok=True)
+    os.makedirs('Unpacked', exist_ok=True)
