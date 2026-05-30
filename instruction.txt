@@ -3,6 +3,7 @@ HOW TO USE?
 Packer.py <- your_file.py //PACK YOUR PYTHON FILE
 Unpacker.py <- your_file.packed //UNPACK YOUR PACKED FILE
 Patcher.py <- your_file.packed //PATCH YOUR PACKED FILE FOR RUN
-Setup.py //SETUP ALL LIBS
+AutoPatch.py <- your_file.py //AUTO PATCH YOUR FILE
+Setup.py //SETUP ALL LIBS AND CREATE DIRS
 
 !!!RUN Setup.py FOR FIX BUGS!!!
