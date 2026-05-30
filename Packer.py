@@ -37,7 +37,7 @@ timer.reset()
 
 timer.start()
 
-#ENCODE FILE
+# ENCODE FILE
 
 import base64
 
@@ -54,7 +54,7 @@ with open('Packed/'+name_without_ext+'.packed', 'wb+') as f:
 timer.end()
 results.append(timer.get())
 
-#RESULTS
+# RESULTS
 
 print('='*50)
 print(f'Reading time:{results[0]} sec')
