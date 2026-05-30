@@ -19,7 +19,7 @@ name = input('ProjectName:')
 
 # READING TOOL FOR CREATION
 
-with open('Tools/Runner.py', 'r') as f:
+with open('Tools/Runner.py', 'r', encoding='utf-8') as f:
     runnercode = f.read()
 
 # REFACTORING
@@ -35,5 +35,5 @@ for line in runnercode.split('\n'):
 
 # SAVING
 
-with open('Patched/'+name+'.py', 'w+') as f:
+with open('Patched/'+name+'.py', 'w+', encoding='utf-8') as f:
     f.write(new)

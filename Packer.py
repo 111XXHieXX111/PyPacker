@@ -28,7 +28,7 @@ timer.start()
 
 filename = os.path.basename(file_path)
 name_without_ext = os.path.splitext(filename)[0]
-with open(file_path, 'r') as f:
+with open(file_path, 'r', encoding='utf-8') as f:
     data = f.read()
 
 timer.end()
@@ -46,7 +46,7 @@ encoded_data = base64.b64encode(bytes(data, encoding='utf-8'))
 # COMPRESS FILE
 
 compressed_data = lzma.compress(encoded_data, preset=9)
-with open('Packed/'+name_without_ext+'.packed', 'wb+') as f:
+with open('Packed/'+name_without_ext+'.packed', 'wb+', encoding='utf-8') as f:
     f.write(compressed_data)
 
 # STOP TIMER

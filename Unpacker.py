@@ -28,7 +28,7 @@ timer.start()
 
 filename = os.path.basename(file_path)
 name_without_ext = os.path.splitext(filename)[0]
-with open(file_path, 'rb') as f:
+with open(file_path, 'rb', encoding='utf-8') as f:
     data = f.read()
 
 timer.end()
@@ -49,7 +49,7 @@ decoded_data = base64.b64decode(decompressed_data).decode()
 
 # SAVE FILE
 
-with open('Unpacked/'  + name_without_ext + '.py', 'w+') as f:
+with open('Unpacked/'  + name_without_ext + '.py', 'w+', encoding='utf-8') as f:
     f.write(decoded_data)
 
 timer.end()
