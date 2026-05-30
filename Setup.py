@@ -4,12 +4,13 @@ if __name__ == '__main__':
 
     modules = ['pytilsx']
 
-    from importlib import import_module
-
     # INSTALL ALL MODULES
 
+    import subprocess
+    import sys
+    
     for module in modules:
-        import_module(module)
+        subprocess.check_call([sys.executable, '-m', 'pip', 'install', module])
     
     # CREATION DIRS
 

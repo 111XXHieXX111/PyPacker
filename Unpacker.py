@@ -28,7 +28,7 @@ timer.start()
 
 filename = os.path.basename(file_path)
 name_without_ext = os.path.splitext(filename)[0]
-with open(file_path, 'rb', encoding='utf-8') as f:
+with open(file_path, 'rb') as f:
     data = f.read()
 
 timer.end()
